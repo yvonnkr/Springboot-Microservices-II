@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: product-stock-service
+
+server:
+  port: ${port:8800}
