@@ -1,19 +1,21 @@
 spring:
   application:
     name: spring-cloud-api-gateway-service
-  cloud:
-    gateway:
-      routes:
-        - id: product-stock-service
-          uri: http://localhost:8800/
-          #uri: lb://product-stock-service
-          predicates:
-            - Path=/check-product-stock/**
-        - id: product-enquiry-service
-          uri: http://localhost:8700/
-          #uri: lb://product-enquiry-service
-          predicates:
-            - Path=/product-enquiry/**
+
+# can use @Configuration Class to set routes instead @See CloudRoutingConfig.class
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: product-stock-service
+#          uri: http://localhost:8800/
+#          #uri: lb://product-stock-service
+#          predicates:
+#            - Path=/check-product-stock/**
+#        - id: product-enquiry-service
+#          uri: http://localhost:8700/
+#          #uri: lb://product-enquiry-service
+#          predicates:
+#            - Path=/product-enquiry/**
 
 server:
   port: ${port:8900}
