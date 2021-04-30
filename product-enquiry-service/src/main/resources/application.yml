@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: product-enquiry-service
+
+server:
+  port: ${port:8700}
